@@ -1,9 +1,9 @@
 <div align='center'>
-    <strong><font size="50" face='Times New Roman'>Nomenclature of gene IDs in metaRLK</font></strong>
+<strong><font face='Times New Roman'><h1>Nomenclature of gene IDs in metaRLK</h1></font></strong>
 </div>
-
-
+<br>
 <center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of Comparison with model plants</font></center>
+<br>
 
 <strong><font size="5" face='Times New Roman'>Introduction</font></strong>
 
