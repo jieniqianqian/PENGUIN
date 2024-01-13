@@ -25,8 +25,14 @@ def rename_new_id(df):
                 result_list.append([df.iloc[i,0],df.iloc[i,1],df.iloc[i,2]+letters_list[i]])
         result=pd.DataFrame(result_list,columns=['Query_accession','Target_accession','new_id'])
         return result
+def get_similar_id(df):
+    df=df.loc[df['Sequence_identity']==df['Sequence_identity'].max(),:]
+    return df
+def filter_change_rlkdb_id(df):
+    df=df.loc[df['Id_identity']==df['Id_identity'].max(),:]
+    return df.iloc[0,:]
 parser = argparse.ArgumentParser(description='Rename the gene ID of chromosome-level plant based on the results of Comparison with model plants')
-parser.add_argument('seqfile',help='Genome protein annotaion')
+parser.add_argument('seqfile',help='Genome protein annotaion file')
 parser.add_argument('all_genome_protein_matches_fmt6',help='The fmt6 results of Comparison with model plants')
 parser.add_argument('genes_genome',help='The chromosome location of genes')
 parser.add_argument('uniprot_abbreviation_upper',help='Species id abbreviation')
@@ -42,10 +48,6 @@ Query_len=Query_len.T
 Query_len.columns=['Query_len']
 Query_len['Query_accession']=Query_len.index.tolist()
 genes_cds=pd.read_csv(args.genes_genome,names=['Query_accession','genome'])
-def get_similiar_id(df):
-    df=df.loc[df['Sequence_identity']==df['Sequence_identity'].max(),:]
-    df=df.iloc[0,:]
-    return df
 diamond_result=pd.read_table(args.all_genome_protein_matches_fmt6,names=['Query_accession','Target_accession','Sequence_identity','Length','Mismatches','Gap_openings',\
 'Query_start','Query_end','Target_start','Target_end','E_value','Bit_score'])
 if args.mode=='O':
@@ -56,7 +58,7 @@ Target_len.columns=['Target_accession','Target_len']
 diamond_result=pd.merge(diamond_result,Target_len,on='Target_accession')
 diamond_result=pd.merge(diamond_result,Query_len,on='Query_accession')
 id_conversion_result=diamond_result.loc[(diamond_result['Sequence_identity']==100.0)&(diamond_result['Target_len']==diamond_result['Query_len'])&(diamond_result['Mismatches']==0)&(diamond_result['Gap_openings']==0)&(diamond_result['E_value']==0),:]
-id_conversion_others=diamond_result.loc[~diamond_result['Query_accession'].isin(id_conversion_result['Query_accession']),:].sort_values(by=['Query_accession','Sequence_identity'],axis=0,ascending=False).groupby('Query_accession').apply(get_similiar_id)
+id_conversion_others=diamond_result.loc[~diamond_result['Query_accession'].isin(id_conversion_result['Query_accession']),:].sort_values(by=['Query_accession','Sequence_identity'],axis=0,ascending=False).groupby('Query_accession').apply(get_similar_id)
 diamond_result=pd.concat([id_conversion_result,id_conversion_others])
 diamond_result.index=range(len(diamond_result.index))
 identity=[]
@@ -70,6 +72,7 @@ diamond_result=pd.DataFrame({'Query_accession':diamond_result['Query_accession']
 'Query_start','Query_end','Target_start','Target_end','E_value','Bit_score']])
 diamond_result.index=range(len(diamond_result.index))
 id_conversion_result=pd.merge(diamond_result,genes_cds)
+id_conversion_result=id_conversion_result.groupby('Query_accession').apply(filter_change_rlkdb_id)
 id_conversion_result.index=range(len(id_conversion_result.index))
 id_conversion_result['Target_accession']=id_conversion_result['Target_accession'].apply(lambda x:x.split('.')[0])
 new_id=[]
