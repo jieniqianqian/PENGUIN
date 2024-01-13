@@ -55,19 +55,20 @@ python3 get_all_genome_new_id_split_diamond_result.py seqfile all_genome_protein
 
 <strong><font size="5" face='Times New Roman'>Result</font></strong>
 <br>
+<br>
 <font size="4" face='Times New Roman'>For example:</font>
 
 ```
 Query_accession,Target_accession,new_id
-TraesCSU02G207500.1,LOC_Os10g02260,WHEAT0G10O02260
-TraesCSU02G019800.1.cds1,LOC_Os10g02670,WHEAT0G10O02670
-TraesCSU02G156800.1,LOC_Os10g02720,WHEAT0G10O02720a
-TraesCSU02G171400.1,LOC_Os10g02720,WHEAT0G10O02720b
-TraesCSU02G211900.1,LOC_Os10g02720,WHEAT0G10O02720c
-TraesCSU02G224100.1,LOC_Os10g02720,WHEAT0G10O02720d
-TraesCSU02G246000.1,LOC_Os10g02840,WHEAT0G10O02840a
-TraesCSU02G253900.1,LOC_Os10g02840,WHEAT0G10O02840b
-TraesCSU02G271000.1.cds1,LOC_Os10g02840,WHEAT0G10O02840c
+TraesCS4B02G059700.1.cds1,LOC_Os10g01100,WHEAT11G10O01100
+TraesCS4B02G235100.1,LOC_Os10g01480,WHEAT11G10O01480a
+TraesCS4B02G235100.2,LOC_Os10g01480,WHEAT11G10O01480b
+TraesCS4B02G235100.3,LOC_Os10g01480,WHEAT11G10O01480c
+TraesCS4B02G235100.4,LOC_Os10g01480,WHEAT11G10O01480d
+TraesCS4B02G233500.1,LOC_Os10g01570,WHEAT11G10O01570
+TraesCS4B02G026700.1,LOC_Os10g02260,WHEAT11G10O02260
+TraesCS4B02G230700.1.cds1,LOC_Os10g02620,WHEAT11G10O02620
+TraesCS4B02G383900.1,LOC_Os10g02840,WHEAT11G10O02840a
 ```
 <font size="4" face='Times New Roman'>In the result file, Query_accession represents gene IDs (transcript IDs) in the target plant genome. each item in their corresponding Target_accession column represent the gene ID of the model plant which is most similar to the corresponding target plant gene ID, and each item in the new_id column is the result gene ID</font>
 
