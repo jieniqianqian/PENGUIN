@@ -1,5 +1,5 @@
 ![Static Badge](https://img.shields.io/badge/metaRLK-rename_gene_IDs-blue)
-![Static Badge](https://img.shields.io/badge/python-script-blue)
+![Static Badge](https://img.shields.io/badge/python-script-red)
 <div align='center'>
 <strong><font face='Times New Roman'><h1>Nomenclature of gene IDs in metaRLK</h1></font></strong>
 </div>
@@ -28,7 +28,7 @@ pip3 install pandas re os argparse biopython itertools
 
 <font size="4" face='Times New Roman'>*Step1 Run blastp*</font>
 
-<font size="4" face='Times New Roman'>For the Consideration of improving the conventional blastp running speed, we recommend using diamond(https://github.com/bbuchfink/diamond) as an alternative,for example</font>
+<font size="4" face='Times New Roman'>For the Consideration of improving the conventional blastp running speed, we recommend using diamond(https://github.com/bbuchfink/diamond) as an alternative,for example:</font>
 
 ```bash
 diamond blastp --db model_plant_protein.dmnd -q seqfile -o all_genome_protein_matches_fmt6
@@ -54,6 +54,7 @@ python3 get_all_genome_new_id_split_diamond_result.py seqfile all_genome_protein
 <font size="4" face='Times New Roman'>Among the parameters, seqfile is the full protein annotation file of the target genome in the above blastp process, and all_genome_protein_matches_fmt6 is the running result of the above blastp process, genes_genom is the running result of the get_all_genes_genom.py script above, and uniprot_abbreviation_upper represents the abbreviation of the target plant. Here we recommend using uniprot databases' species abbreviation model to determine this parameter. The mode parameter has two values: A and O. When the target plant is a monocot plant, please use O. In other cases, please use A.</font>
 
 <strong><font size="5" face='Times New Roman'>Result</font></strong>
+<font size="4" face='Times New Roman'>For example:</font>
 
 ```
 Query_accession,Target_accession,new_id
