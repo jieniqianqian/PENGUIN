@@ -68,6 +68,7 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
 ####################################################################################
+python3 get_all_genome_new_id_split_diamond_result.py -h
 usage: get_all_genome_new_id_split_diamond_result.py [-h]
                                                      seqfile
                                                      all_genome_protein_matches_fmt6
