@@ -5,7 +5,7 @@
 </div>
 <br>
 
-<center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of Comparison with model plants</font></center>
+<center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of alignment with model plants(Arabidopsis thaliana/Oryza sativa)</font></center>
 <br>
 <br>
 
