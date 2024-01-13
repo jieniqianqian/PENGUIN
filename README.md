@@ -1,13 +1,15 @@
 <div align='center'>
-    <strong><font size="20" face='Times New Roman'>Nomenclature of gene IDs in metaRLK</font></strong>
+    <strong><font size="50" face='Times New Roman'>Nomenclature of gene IDs in metaRLK</font></strong>
 </div>
 <center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of Comparison with model plants</font></center>
 
 <strong><font size="5" face='Times New Roman'>Introduction</font></strong>
 
-<font size="4" face='Times New Roman'>In the metaRLK database (https://metarlk.biocloud.top/), based on the classical blastp program, we propose a format that can unify gene IDs of various plant genomes. In order to facilitate users to apply this format to rename other plant gene IDs , the following script is provided here.</font>
-<font size="4" face='Times New Roman'>Author: Qian Liu</font>
-<font size="4" face='Times New Roman'>Contact email: 18229048546@163.com</font>
+<font size="4" face='Times New Roman'>In the metaRLK database (https://metarlk.biocloud.top/), based on the classical blastp program, we propose a format that can unify gene IDs of various plant genomes. In order to facilitate users to apply this format to rename other plant gene IDs , the following script is provided here.
+
+Author: Qian Liu
+
+Contact email: 18229048546@163.com</font>
 
 <strong><font size="5" face='Times New Roman'>Requirements</font></strong>
 
@@ -29,7 +31,7 @@ diamond blastp --db model_plant_protein.dmnd -q seqfile -o all_genome_protein_ma
 
 <font size="4" face='Times New Roman'>In the metaRLK, we recommend to align monocot genome protein annotation file to the Oryza sativa database, and align the other genome protein annotation file to the Arabidopsis thaliana database.</font>
 
-<font size="4" face='Times New Roman'>*Step2 Get the relationship between gene ID and their chromosome position*</font>
+<font size="4" face='Times New Roman'>*Step2 Get the relationship between gene IDs and their chromosome position*</font>
 
 ```bash
 python3 get_all_genes_genome.py gtf_file
@@ -66,7 +68,7 @@ usage: get_all_genome_new_id_split_diamond_result.py [-h]
                                                      uniprot_abbreviation_upper
                                                      mode
 
-Rename the gene ID of chromosome-level plant based on the results of
+Rename the gene IDs of chromosome-level plant based on the results of
 Comparison with model plants
 
 positional arguments:
