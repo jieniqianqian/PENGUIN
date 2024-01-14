@@ -70,7 +70,7 @@ TraesCS4B02G026700.1,LOC_Os10g02260,WHEAT11G10O02260
 TraesCS4B02G230700.1.cds1,LOC_Os10g02620,WHEAT11G10O02620
 TraesCS4B02G383900.1,LOC_Os10g02840,WHEAT11G10O02840a
 ```
-<font size="4" face='Times New Roman'>In the result file, Query_accession represents gene IDs (transcript IDs) in the target plant genome. each item in their corresponding Target_accession column represent the gene ID of the model plant which is most similar to the corresponding target plant gene ID, and each item in the new_id column is the result gene ID.</font>
+<font size="4" face='Times New Roman'>In the result file change_rlkdb_id.csv, Query_accession represents gene IDs (transcript IDs) in the target plant genome. each item in their corresponding Target_accession column represent the gene ID of the model plant which is most similar to the corresponding target plant gene ID, and each item in the new_id column is the result gene ID.</font>
 
 <strong><font size="5" face='Times New Roman'>Help</font></strong>
 <br>
