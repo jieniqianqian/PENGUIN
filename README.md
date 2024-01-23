@@ -1,4 +1,4 @@
-[![Static Badge](https://www.python.org/static/img/python-logo@2x.png)](https://img.shields.io/badge/python-script-red)
+![Static Badge](https://img.shields.io/badge/python-script-red)
 ![Static Badge](https://img.shields.io/badge/metaRLK-rename_gene_IDs-blue)
 
 <div align='center'>
