@@ -1,5 +1,5 @@
-![Static Badge](https://img.shields.io/badge/metaRLK-rename_gene_IDs-blue)
 [![Static Badge](https://www.python.org/static/img/python-logo@2x.png)](https://img.shields.io/badge/python-script-red)
+![Static Badge](https://img.shields.io/badge/metaRLK-rename_gene_IDs-blue)
 
 <div align='center'>
 <strong><font face='Times New Roman'><h1>Plant ExoN Gene Unified ld Nomenclature</h1></font></strong>
