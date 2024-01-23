@@ -1,14 +1,15 @@
 ![Static Badge](https://img.shields.io/badge/metaRLK-rename_gene_IDs-blue)
-![Static Badge](https://img.shields.io/badge/python-script-red)
+[![Static Badge](https://www.python.org/static/img/python-logo@2x.png)](https://img.shields.io/badge/python-script-red)
+
 <div align='center'>
-<strong><font face='Times New Roman'><h1>Nomenclature of gene IDs in metaRLK</h1></font></strong>
+<strong><font face='Times New Roman'><h1>Plant ExoN Gene Unified ld Nomenclature</h1></font></strong>
 </div>
 <br>
 
-<center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of alignment with model plants(Arabidopsis thaliana/Oryza sativa)</font></center>
-<br>
-<br>
+<center><font size="4" face='Times New Roman'>nomenclature of gene IDs of chromosome-level plant based on the results of alignment with model plants(*Arabidopsis thaliana/Oryza sativa*)</font></center>
 
+<br>
+<br>
 
 <strong><font size="5" face='Times New Roman'>Introduction</font></strong>
 
@@ -34,9 +35,9 @@ pip3 install pandas re os argparse biopython itertools
 diamond blastp --db model_plant_protein.dmnd -q seqfile -o all_genome_protein_matches_fmt6
 ```
 
-<font size="4" face='Times New Roman'>Here model_plant_protein.dmnd represents the diamond-formatted database of the full model plant's protein(we provide diamond-formatted databases of two model plants here, Arabidopsis thaliana and Oryza sativa. Users can build their own diamond-formatted database), seqfile represents the full protein annotation file of the target genome, and all_genome_protein_matches_fmt6 is the running result.</font>
+<font size="4" face='Times New Roman'>Here model_plant_protein.dmnd represents the diamond-formatted database of the full model plant's protein(we provide diamond-formatted databases of two model plants here, *A.thaliana* and *O.sativa*. Users can build their own diamond-formatted database), seqfile represents the full protein annotation file of the target genome, and all_genome_protein_matches_fmt6 is the running result.</font>
 
-<font size="4" face='Times New Roman'>In the metaRLK, we recommend to align monocot genome protein annotation file to the Oryza sativa database, and align the other genome protein annotation file to the Arabidopsis thaliana database.</font>
+<font size="4" face='Times New Roman'>In the metaRLK, we recommend to align monocot genome protein annotation file to the *O.sativa* database, and align the other genome protein annotation file to the *A.thaliana* database.</font>
 
 <font size="4" face='Times New Roman'>*Step2 Get the relationship between gene IDs and their chromosome position*</font>
 
